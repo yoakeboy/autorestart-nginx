@@ -1,19 +1,17 @@
 #!/bin/bash
 unit_file="/etc/systemd/system/nginx-restart.service"
 
-cat <<EOL > $unit_file
+cat <<EOL > "$unit_file"
 [Unit]
 Description=Restart Nginx Service
 After=network.target
 
 [Service]
+Type=simple
 ExecStart=/bin/bash -c '/bin/sleep 600 && /bin/systemctl restart nginx'
-Restart=always
-RestartSec=0
-TasksMax=infinity
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
 EOL
 
 # Reload systemd
