@@ -7,7 +7,7 @@ Description=Restart Nginx Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c '/bin/sleep 180 && /bin/systemctl restart nginx'
+ExecStart=/bin/bash -c '/bin/sleep 600 && /bin/systemctl restart nginx'
 Restart=always
 RestartSec=0
 
