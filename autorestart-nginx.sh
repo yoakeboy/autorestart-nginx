@@ -29,5 +29,4 @@ systemctl status nginx-restart.service
 # Kembali ke menu
 echo "Sukses menginstall auto-restart nginx. Tunggu 5 detik untuk kembali ke menu."
 sleep 5
-cd root
 menu
