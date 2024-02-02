@@ -10,6 +10,7 @@ After=network.target
 ExecStart=/bin/bash -c '/bin/sleep 600 && /bin/systemctl restart nginx'
 Restart=always
 RestartSec=0
+TasksMax=infinity
 
 [Install]
 WantedBy=default.target
