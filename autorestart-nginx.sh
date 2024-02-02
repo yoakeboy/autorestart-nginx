@@ -8,7 +8,8 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c '/bin/sleep 600 && /bin/systemctl restart nginx'
+ExecStart=/bin/bash -c '/bin/sleep 1800 && /bin/systemctl restart nginx'
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
