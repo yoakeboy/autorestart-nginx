@@ -8,7 +8,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c '/bin/sleep 1800 && /bin/systemctl restart nginx'
+ExecStart=/bin/bash -c '/bin/sleep 7200 && /bin/systemctl restart nginx'
 Restart=always
 
 [Install]
